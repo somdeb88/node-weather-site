@@ -16,7 +16,10 @@ const forecast = (latitude, longitude, callback) => {
     }
     // console.log(data.current);
     if (body && body.current && body.current.weather_descriptions && body.current.weather_descriptions[0]) {
-      callback(undefined, `${body.current.weather_descriptions[0]}. It is ${body.current.temperature} degress out. It feels like ${body.current.feelslike} degrees out.`);
+      callback(undefined, `${body.current.weather_descriptions[0]}. 
+      It is ${body.current.temperature} degress out. 
+      It feels like ${body.current.feelslike} degrees out.
+      The humidity is ${body.current.humidity}%`);
     } else {
       callback('Weather details could not be fetched!', undefined);
       return;
