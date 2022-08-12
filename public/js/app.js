@@ -1,6 +1,3 @@
-console.log('Client JS file loaded in browser!');
-
-
 const fetchForecast = (address) => {
   fetch(`/weather?address=${address}`).then((response) => {
     response.json().then((data) => {
